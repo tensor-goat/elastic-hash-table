@@ -47,6 +47,42 @@ t.print_stats()
 python test_elastic.py
 ```
 
+```bash
+Elastic Hash Table — Python + C Test Suite
+================================================================
+[PASS] Basic insert / get
+[PASS] Update existing key (no duplicates)
+[PASS] Dict interface (__getitem__ / __setitem__ / __delitem__ / __contains__ / KeyError)
+[PASS] Complex picklable values (dict, list, tuple, set, None)
+[PASS] Deletion with tombstones
+[PASS] Re-insert after delete (reclaims tombstone)
+[PASS] Iteration (keys / values / items / __iter__)
+[PASS] __bool__ / __repr__
+[PASS] Stress: 9,000 inserts in 529 ms, 9,000 lookups in 361 ms
+================================================================
+ElasticHashTable  —  9,000 / 10,000  (90.0% load)
+────────────────────────────────────────────────────────────────
+  Level  0:    5,000 slots |    5,000 live (100.0%) |     0 tombstones
+  Level  1:    2,500 slots |    2,500 live (100.0%) |     0 tombstones
+  Level  2:    1,250 slots |    1,250 live (100.0%) |     0 tombstones
+  Level  3:      625 slots |      249 live (39.8%) |     0 tombstones
+  Level  4:      312 slots |        1 live ( 0.3%) |     0 tombstones
+  Level  5:      156 slots |        0 live ( 0.0%) |     0 tombstones
+  Level  6:       78 slots |        0 live ( 0.0%) |     0 tombstones
+  Level  7:       39 slots |        0 live ( 0.0%) |     0 tombstones
+  Level  8:       20 slots |        0 live ( 0.0%) |     0 tombstones
+  Level  9:       20 slots |        0 live ( 0.0%) |     0 tombstones
+================================================================
+[PASS] Geometric load distribution (level 0 densest)
+[PASS] Auto-resize: 64 → 512 to hold 300 items
+[PASS] Numeric / tuple keys (stringified)
+[PASS] Large value (10 k element list)
+
+================================================================
+All 13 tests passed.
+================================================================
+```
+
 ## Files
 
 | File | Description |
