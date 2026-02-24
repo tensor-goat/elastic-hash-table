@@ -60,5 +60,5 @@ python test_elastic.py
 
 ## References
 > **Optimal Bounds for Open Addressing Without Reordering**
-> > Martín Farach‐Colton, Andrew Krapivin, William Kuszmaul
-> > > (https://arxiv.org/pdf/2501.02305)
+> Martín Farach‐Colton, Andrew Krapivin, William Kuszmaul
+> (https://arxiv.org/pdf/2501.02305)
